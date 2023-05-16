@@ -1,0 +1,43 @@
+S3 Service 
+-> Simple Storage Service
+-> Bucket kku limitation
+
+ec2 -> Server kku edaila
+S3 -> Storage kku edaila
+
+EC2 -> Regional Service
+S3 -> Global Service
+
+S3 is cheap compared to EC2
+---------------------------------------------------------------------------------------------------------------------------------
+
+Creatig Bucket
+ 
+-> S3 -> Bucket -> AWS Region -> Enable ALCS(Access control list) -> Object Ownership -> Block all public access -> Create Bucket
+
+We can upload 
+
+To view the uploaded files -> Remove Block all public access(On permission) -> To view select the file and make ACL to read(public)
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+To Den the policy for viewing files
+
+Bucket -> Permissions -> Bucket Policy -> Edit -> Policy Generator
+       -> Select Type of Policy -> S3 Bucket Policy
+       -> Effect -> Deny
+       ->Action -> listBucket
+       -> Copy paste the ARN
+
+---------------------------------------------------------------------------------------------------------------------------------
+Click Upload on Bucket -> On properties
+->8 Storage Class 
+  -> Standard -> No Limitation -> more than a month -> Frequenly Accessed Data -> Stored in more tha 3 availablity zone
+  -> Standard-IA -> Data with changing or unknown access
+  -> One Zone-IA -> Recreatable, infrequently access data stored in AZ with milliseconds -> stored in one availability zone
+  -> Glacier Instant Retrieval -> Long-lived archive data accessed once a quarter with instant retrieval in milliseconds
+  -> Glacier Deep Archive -> Long-lived archive data accessed less than once a year with retrieval of hours
+  -> Glacier Flexible Retrival -> Long-lived archive data accessed once a year with retrieval of minutes to hours
+--------------------------------------------------------------------------------------------------------------------------------
+Creating Liferule 
+ -> bucket -> management -> create lifecycle -> name -> apply to all objects in the bucket -> agree -> Move cirrent versions of object between storage classes ->add transition with days -> create rule

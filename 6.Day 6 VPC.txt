@@ -1,0 +1,96 @@
+Network Engineering 
+
+VPC -> Virtual Private Cloud 
+---------------------------------------------------
+ Default VPC
+..................................
+Note (ap-south-1a)		   .
+1 -> Region				   .
+1a, 1b, 1c -> Availability zone  .
+..................................
+
+IP Address
+
+IPv4 address -> 32 bit
+IPv6 address -> 128 bit
+
+public IP -> For end to end user use -> Dynamic IP
+Private IP -> For Organization use -> Static IP
+-------------------------------------------------------------------
+IPv4 address -> Limit(0-255)
+	-> Ex: 1.2.3.4, 10.0.0.0, 192.0.34.245 -> IPv4 address
+	-> Non Ipv4 address -> 10.0.12.256
+Default VPC -> 172.0.0.21
+...............................................|
+-> Default -> 13.233.148.209 -> 13.127.104.251.|
+...............................................|
+To Restrict the IP Address changing when stoped and restarted
+->  Elastic IPs -> Chargeable -> Static IP
+
+To Allocate -> 10.0.0.0 - 10.0.0.6
+
+CIDR -> Classless Interdomain Routing
+CIDR Value -> 24 ips
+
+8 8 8 8 -> 32bit
+
+10.0.0.0/24 -> 256 bit
+10.0.0.0/32 -> 1
+10.0.0.0/31 -> 2
+10.0.0.0/30 -> 4
+10.0.0.0/29 -> 8
+
+Formula 
+-> TotalBitsSizeofIpv4 - CIDR value = n -> 2^n
+TotalBitsSizeOfIPv4 =32, CIDR value = 28
+-> 32 - 28
+-> n=4
+-> 2^n -> 2^4 -> 16
+Total no of Host = 16
+
+TotalBitsSizeOfIPv4 =32, CIDR value = 27
+-> 32 - 27
+-> n=5
+-> 2^5 -> 2^5 -> 32
+Total no of Host = 32
+
+----------------------------------
+10.0.0.0/22 - 1024
+10.0.0.0 - 10.0.0.255 = 256Ip
+10.0.1.0 - 10.0.1.255 = 256Ip
+10.0.2.0 - 10.0.2.255 = 256Ip
+10.0.3.0 - 10.0.3.255 = 256Ip
+----------------------------------
+10.0.0.0/21 - 2048
+10.0.0.0 - 10.0.0.255 = 256Ip
+10.0.1.0 - 10.0.1.255 = 256Ip
+10.0.2.0 - 10.0.2.255 = 256Ip
+10.0.3.0 - 10.0.3.255 = 256Ip
+10.0.4.0 - 10.0.4.255 = 256Ip
+10.0.5.0 - 10.0.5.255 = 256Ip
+10.0.6.0 - 10.0.6.255 = 256Ip
+10.0.7.0 - 10.0.7.255 = 256Ip
+----------------------------------
+10.0.0.0/20 - 4096
+10.0.0.0 - 10.0.15.255 = 4096Ips
+----------------------------------
+10.0.0.0/16 - 65536
+10.0.0.0 - 10.0.255.255 = 65536Ips
+--------------------------------------------------------------------------------------------------
+create VPC -> VPC ONLY -> Ipv4 CIDR -> 10.0.0.0/16 -> create VPC
+create Subnet -> private VPC -> availability zone 1a-> 10.0.1.0/24
+-> For a VPC we can create 200 subnets
+create Subnet -> private VPC -> availability zone 1b-> 10.0.2.0/24
+Attach VPC to internet Gateway -> create Internet Gateway -> Attach VPC
+Route Table -> For Individual Connectivity -> create Route Table -> public and private Route Table
+subnet -> Route Table -> Internet Gateway
+Route table is the intermidiate between subnet and IGW and change can be made only in Route Table
+Subnet Association -> Connecting Subnet and Route Table 
+			 -> Edit subnet association -> Add public or private subnet
+Routes -> Connecting Route And Internet Gateway
+publicRouteTable -> Routes -> add Route -> 0.0.0.0/0 and IGW -> Create Route
+
+We Allocated 256Ips but intialized 251Ips -> Note
+
+create Instance -> change Network Setting -> VPC -> Subnet -> Enable
+---------------------------------------------------------------------------------------------------

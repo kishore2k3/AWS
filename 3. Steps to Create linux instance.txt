@@ -1,0 +1,52 @@
+How to Create Linux Instance 
+---------------------------------------------------------------------
+Steps to create Instance for Linux
+
+Step-1 -> Click Select Instance
+Step-2 -> Give name 
+Step-3 -> Select OS as Amazon Linux
+Step-4 -> Create Key pair as ppk if not exists
+Step-5 -> In Network Setting Allow SSH and both HTTPS
+Step-6 -> Lanch The Instance 
+Step-7 -> Copy the IP Address from EC2 Instance Connect
+
+--------------------------------------------------------------------
+
+Download putty.exe file 
+
+Step-1 -> Open putty.exe
+Step-2 -> On Session paste the Copied IP Address
+Step-3 -> Click Connection -> SSH -> Auth -> Credential -> Upload the ppx file Key Pair
+Step-4 -> Again Click Connection -> Set Time 0 to 30 
+Step-5 -> Click Finish
+Step-6 -> type "ec2-user" on login as
+Step-7 -> To change the font size -> Right click on the top bar -> Click Change Setting
+       -> Click Appereance -> Select font size
+
+--------------------------------------------------------------------
+
+Commands in linux
+
+-> sudo-su
+-> cd /
+-> clear 
+-> history
+-> ls -> to display the folder and file
+
+To Update the Linux System        
+ -> Use Command -> yum update -y
+
+HTTPS Service
+ -> Use Command -> yum install httpd
+ -> To Start -> start httpd.service
+
+To Open HTML file
+ -> cd var/www/html
+ -> vi index.html
+
+To return back to command prompt
+
+ -> "esc" + ";" + "w" + "q"
+
+
+----------------------------------------------------------------------

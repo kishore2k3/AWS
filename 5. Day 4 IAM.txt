@@ -1,0 +1,35 @@
+Identity and Access Management(IAM)
+   ->Security Engineering
+	-> User Groups
+	-> Users
+	-> Policy
+	-> Role
+	-> MFA
+
+To Open IAM 
+	-> Services -> Security, Indentity, & Compliance -> IAM
+
+------------------------------------------------------------------------------------------------------------------
+To Create User Group 
+	-> Left Corner -> User groups -> name -> policy -> Create
+
+To Create User
+	-> Left Corner -> Users -> name -> Select Provide user access -> create an IAM user
+	-> password -> next -> Select Group -> create -> Download CSV.file
+
+To Create Policy
+ 	-> Left Corner -> Policy -> Create Policy -> Select S3 -> Switch to allow permissions -> click write
+	-> select (deletebucket & deleteObject ) -> Change Resource to All -> next -> policy name -> Create Policy
+
+To Create inline Policy
+	-> Users -> Click Users -> add permission -> inline policy -> 
+
+------------------------------------------------------------------------------------------------------------------
+AWS Account Access
+	-> GUI -> Graphical User Interface -> CONSOLE ACCESS -> Username and password
+	-> CLI -> Command Line Interface -> Accesskey id and Secret Access key
+	-> SDK -> Software Development Kit 
+
+-> User -> Security Credentials -> create access key -> CLI -> Download .csvfile -> Done
+Open Linux Instance 
+	->sudo su -> cd / -> aws configure -> key and secret key -> aws s3 ls

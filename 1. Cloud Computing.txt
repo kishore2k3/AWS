@@ -1,0 +1,106 @@
+|----------------|
+|Cloud Computing |
+|----------------|
+
+Server -> 
+1) The layer between Request and Responce..
+
+Server Consist of High performing->
+    1) Storage Devices
+    2) Processor
+    3) RAM
+    4) Networking Devices
+
+RIR -> Remote Internet Renter
+On demand delevery of "IT(Server)" resources over the internet with pay as you go pricing
+->Server
+->Storage
+->Networking
+->Database
+->Security
+->Application
+->Cloud Service Provider
+  ->One of the top cloud service provider
+    ->AWS   ->Amazon Web Services
+    ->Azure ->Microsoft
+    ->GCP   ->Google Cloud Platform
+    ->Alibaba
+    ->IBM Cloud
+    ->Oracle Cloud
+
+--------------------------------------------------------------------------------------------------------------------
+
+->Availability Zone
+   ->Isolated Region between zones
+   ->Minimum Availability Zone -> 2
+   ->Group of availability region
+
+--------------------------------------------------------------------------------------------------------------------
+
+|----------------------|
+|Cloud Service Consumer|
+|----------------------|
+
+-> IT Companies
+-> Government Organization
+-> Individuals
+
+---------------------------------------------------------------------------------------------------------------------
+
+IaaS ->Infrastructure as a Service
+PaaS ->Platform as a Service
+SaaS ->Software as a Service
+
+----------------------------------------------------------------------------------------------------------------------
+
+-> Only can host single app in a server
+-> On-Premises-> Own(Physical) Server
+...............................
+.					.
+.     CPU-4				.
+.     RAM-128GB			.
+.     Storage-10TB		.
+.					.
+...............................
+.					.
+.     FlipKart			.
+.     Windows 10			.
+.     10 LAKHS			.
+.					.
+...............................
+
+Due to some cons -> They introduced -> Virtualization -> Hypervisors
+
+...............................
+.					.
+.     2 CPU				.
+.     RAM-64GB			.
+.     Storage-10TB		.
+.					.
+...............................
+.					.
+.     2 CPU				.
+.     RAM-64GB			.
+.     Storage-10TB		.
+.					.
+...............................
+
+-----------------------------------------------------------------------------------------------------------------------
+
+1986 -> Terminalogy
+2006 -> AWS -> Northern Virginia
+
+(Server , Storage -> EC2, S3)
+Terminolgy -> Technology
+
+2016-> India -> Mumbai
+2023-> 300+ Services
+-----------------------------------------------------------------------------------------------------------------------
+
+Migration
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+    
+

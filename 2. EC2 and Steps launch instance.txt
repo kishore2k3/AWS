@@ -1,0 +1,54 @@
+IaaS-> server engineering
+EC2-> Elastic compute cloud -> To Launch virtual machines in cloud
+   CPU Storage -> compute
+         ->Resizeable compute capacity
+
+-------------------------------------------------------------------
+
+Virtual machines in Cloud -> named as -> (Instance)
+
+Instance -> Windows Instance -> Linux Instance 
+
+--------------------------------------------------------------------
+Steps To Create Instance
+
+Step-1 ->Select Server as you wish By Clicking "Stockholm".
+Step-2 ->Click Lanch Instance
+Step-3 ->Add Name and select the OS(eg.Windows)
+Step-4 ->Choose Free tier eligible
+Step-5 ->Select Instance Type
+Step-6 ->Click new Key Pair-> Enter Name
+         For Windows -> .pem(Privacy Enhanced Mail)
+         For Linux -> .ppk(Putty Primary Key)
+Step-7 ->Edit Network Setting as per requirement
+Step-8 ->Edit Storage(maximum 30GB for Free tier's)
+
+.................................................|
+								 |
+2/2 Check in Instance -> 1) Instance Status Check| ----> Interview Question
+                         2) System Status Check  |
+								 |
+.................................................|
+
+---------------------------------------------------------------------
+
+Step Further -> Select Instance Id -> Connect -> Choose of RDP client
+
+---------------------------------------------------------------------
+
+EBS -> Elastic Block Store (Maximum 60TB)
+
+Creating EBS volume -> 10GB -> This volume can be used multiple times
+
+Creating -> Available -> In-use
+
+Right Click on Start menu -> Disk Manager
+   ->Disk 1 -> Online -> Initialization
+
+Online -> Intialize -> Change GDT -> Allow everything
+
+Instance availability zone -> Volume Zone 
+To rechange volume -> action -> volume
+Volume (D) -> Right Click -> Extand Volume 
+
+---------------------------------------------------------------------
