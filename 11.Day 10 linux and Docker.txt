@@ -1,0 +1,38 @@
+Linux -> command
+    1  yum install httpd -y
+    2  yum install docker -y
+Docker -> command
+    3  service docker start
+    4  service docker status
+
+Nginix -> command
+	-> docker pull nginx
+	-> service docker start -> for linux only not needed for ubuntu
+	-> docker run -itd -p "80:80" nginx
+
+Create a directory -> vi Dockerfile
+6  cd hello
+    7  ls
+    8  vi Dockerfile
+    9  aws configure
+   10  cd var/www/html
+   11  cd /
+   12  cd var/www/html
+   13  vi index.html
+   14  aws s3 ls
+   15  aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 858745925501.dkr.ecr.ap-southeast-1.amazonaws.com
+   16  docker build -t myrepo .
+   17  docker tag myrepo:latest 858745925501.dkr.ecr.ap-southeast-1.amazonaws.com/myrepo:latest
+   18  ls
+   19  pwd
+   20  ls
+   21  cd /
+   22  cd hello
+   23  ls
+   24  docker build -t myrepo .
+   25  docker tag myrepo:latest 858745925501.dkr.ecr.ap-southeast-1.amazonaws.com/myrepo:latest
+   26  docker tag myrepo:latest 858745925501.dkr.ecr.ap-southeast-1.amazonaws.com/myrepo:latest
+   27  docker push 858745925501.dkr.ecr.ap-southeast-1.amazonaws.com/myrepo:latest
+   28  vi Dockerfile
+   29  vi Dockerfile
+   30  history

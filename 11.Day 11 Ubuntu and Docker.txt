@@ -1,0 +1,29 @@
+Ubuntu -> command
+	-> apt - Advanced Package Tool
+	-> apt update -y
+	-> apt-get update -y
+	-> apt install apache2
+	-> apt install docker.io -y
+
+Docker -> command
+	-> apt install docker.io -y
+	-> docker --version
+
+nginx 
+	-> docker pull nginx
+	-> service docker start -> for linux only not needed for ubuntu
+	-> docker run -itd -p "80:80" nginx
+
+to remove -> rm folder_name
+to print -> echo "helo"
+to write in file -> echo "helo" > index.html
+to reverse the written line -> tac file.txt
+to see what in file -> cat filename
+to view file and folder with details -> ls -lrt
+to create directory -> mkdir name
+to create empty file -> touch name
+to overwrite -> i
+to save and return to terminal -> esc + ":" + w + q
+to save to terminal -> esc + ":" + w
+to return without daving to terminal -> esc + ":" + q
+to delete -> esc + ":" + %d

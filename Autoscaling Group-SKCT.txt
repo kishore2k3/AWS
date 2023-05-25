@@ -1,0 +1,99 @@
+Autoscaling Group:
+=================
+
+1.Customised AMI
+2.Launch Template
+3.ASG --> Autoscaling Group
+
+===========================
+I. CUSTOMISED IMAGE:
+============================
+Step 1: Launch Instance (Amazon Linux) - Security Group Name ( ASG Security Group)
+Step 2: Implement the commands
+    1  clear
+    2  yum update -y
+    3  yum install httpd -y
+    4  clear
+    5  systemctl start httpd
+    6  systemctl enable httpd
+    7  echo "<h1> My Application is running</h1>" > /var/www/html/index.html
+
+Step 3 : Go to  Actions --> Image and templates --> Create Image --> Name --> Create Image
+
+Wait for 5 minutes --> AMI Status should come available
+----------------------------------------------------------
+Select AMI --> Launch Instance from AMI --> (Name - AMI Instance) --> Select existing security groups --> Select ASG Security Group --> Launch Instance
+
+Copy and Paste the Public IP --> Output Should come
+--------------------------------------
+
+Terminate the All Instances
+=====================================================================================
+TAKE A SCREENSHOT OF YOUR AMI
+=================================================================
+II . LAUCH TEMPLATE
+===================
+
+1.Select the previously launched instance with custom AMI
+2.Go to actions
+3.select image and templates
+4.create template from instance
+5.Name -> MyAppTemplate
+
+=============================================================
+
+III. AUTOSCALING GROUP
+
+Select the Launch Template --> Actions --> Create Autoscaling Group
+
+1.Name - MyASG-SKCT
+2.Availability Zone (1a, 1b, 1c)
+3.Loadbalancer - Skip (Next)
+4.Desired Capacity - 2, Min - 1, Max - 3
+5.Notification - Skip (Next)
+6.Tag - Skip (Next)
+
+Check all Review and Create Autoscaling Group
+
+
+====================================
+
+If you stop one instance another instance will be created automatically
+
+====================================
+
+Deletion Procedure:
+1.Delete Autoscaling Group (All Instanced will be terminated automatically)
+2.Delete Launch Template
+3.Terminate Instances
+4.Deregister AMI
+5.Delete All snapshots
+6.Check AMI, Launchtemplate, Snapshot once again
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

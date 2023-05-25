@@ -1,0 +1,26 @@
+Load Balancer and Auto Scaling
+
+Load Balancer -> Network Engineering
+->Types 
+	-> Classic Load Balancer
+	-> Application Load Balancer
+	-> Network Load Balancer
+	-> Gateway Load Balancer
+
+-> Elastic Load Balancer (ELB)
+	->Help Check
+	->Distribute the Traffic 
+
+Security -> Instance Level Security -> Only can add 
+How to Create Security Group 
+	-> Name -> Inbound rule -> add rule -> SSH, Httdp, Httdps, RDP -> Source Anywere -> Create Security Group
+
+Classic Load Balancer
+->Step To Create CLB
+	-> Select CLB -> Name -> Select Security Group -> Skip -> Skip -> Skip -> Create
+On Instance User Data 
+#!/bin/bash
+yum install httpd -y
+service httpd start
+systemctl enable httpd
+echo "<h1>CLASSIC LOAD BALANCER</h1>" > /var/www/html/index.html

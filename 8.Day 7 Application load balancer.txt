@@ -1,0 +1,64 @@
+Application Load Balancer
+----------------------------
+
+For Microservices architecture
+
+Step-1 ->Create Two Instance 
+
+-> Instance-1 with user data
+#!bin/bash
+yum install httpd -y
+service httpd start
+systemctl enable httpd
+mkdir /var/www/html/facebook
+echo "<h1>Facebook Application is running</h1>" > /var/www/html/facebook/index.html
+
+-> Instance-2
+#!bin/bash
+yum install httpd -y
+service httpd start
+systemctl enable httpd
+mkdir /var/www/html/instagram
+echo "<h1>Instagram Application is running</h1>" > /var/www/html/instagram/index.html
+
+Step-2 -> Create Target group - Select instances
+	Name it : Targetgroup1
+	Select instance we want to add (Instance 1)
+	Select include as pending below 
+	Create Target group 1
+Step-3 -> Create Target group 
+	Name it : Targetgroup2
+	Select instance we want to add (Instance 2)
+	Select include as pending below 
+	Create Target group 2
+
+-> Monolethic Architecture
+
+Step-4 -> Create Load Balancer
+	Select Application load balancer
+	Name Applicationloadbalancer001
+	Select VPC Subnets/Az - Select All availability zones
+	Security group- Load balancer security group
+	Add Target group 1
+	Create Application load balancer
+
+Step-5 -> Select Application load balancer
+	Go to Listeners/ Rules
+	Manage Rules
+	Select +
+	Insert rule
+-> Add condition
+Path Based routing
+/facebook*
+
+Forward to 
+target group 1
+Save
+
+-> Add condition
+Path Based routing
+/instagram*
+
+Forward to 
+target group 2
+Save

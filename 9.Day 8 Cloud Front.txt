@@ -1,0 +1,9 @@
+Cloud Frond
+	->Content Delivery Network (CDN)
+	->Edge Location around world
+
+Step to Create Cloud Front
+	Step-1 -> Click Service -> Networking and content delivert -> Cloud front 
+	Step-2 -> Create Distribution
+	Step-3 -> Select s3 and click website end point
+	Step-4 -> Web Application Firewall(WAF) -> Do not enable security protections

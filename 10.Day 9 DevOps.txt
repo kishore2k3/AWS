@@ -1,0 +1,27 @@
+Cloud -> Creation, Modify
+DevOps-> Software Tools
+	-> Development + Operation
+	-> Helps collaboration, Communication & integeration between software groups of developers
+	-> 100% Automation
+
+Important DevOps Tools
+	-> Source Code Management(SCM) -> Git(software) & GitHub(Remote Repository)
+	-> Continous Integration Tool(CIT)
+	-> Jenkins
+	-> Containerization Tools -> Docker
+	-> Configuration Automation Tools -> Ansible
+	-> Orchestration Tools -> kubernetes(K8S)
+	-> Infrasturcture Monitoring -> Prometheus
+	-> Visualization Tools -> Grafana
+	-> Log Monitoring -> Splunk
+	-> Code Quality Test Tool -> SonarQube
+	-> Artifactory Tool -> Nexes
+	-> Infrastructure as a Code(IaaC) Tool -> Terraform
+	
+
+Software Development Lifecycle(SDLC)
+	Planning -> Requirement -> Design -> Software developer -> Testing -> deployment -> operation and maintainance 
+
+Agile methodology 
+	Reqirement -> Analysis -> Design -> Development -> Testing -> Support and maintenance
+
